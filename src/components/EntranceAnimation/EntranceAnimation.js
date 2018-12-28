@@ -8,7 +8,7 @@ const colors = [
     '#FF8A65',
     '#FF7043',
     '#FF5722',
-    '#E64A19',
+    '#F4511E',
 ];
 
 const Container = styled.div`

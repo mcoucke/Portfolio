@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { StaggeredMotion, spring } from "react-motion";
 
 const colors = [
-    '#FFCCBC',
-    '#FFAB91',
-    '#FF8A65',
-    '#FF7043',
-    '#FF5722',
-    '#E64A19',
+    '#B2EBF2',
+    '#80DEEA',
+    '#4DD0E1',
+    '#26C6DA',
+    '#00BCD4',
+    '#00ACC1',
 ];
 
 const Container = styled.div`
