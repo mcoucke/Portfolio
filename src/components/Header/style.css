@@ -2,9 +2,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: rgba(255, 76, 2, 0.62);
+    background: #E64A19;
 }
 
 .section {
-    color: rgba(35, 64, 190, 0.64);
+    color: #000000;
 }

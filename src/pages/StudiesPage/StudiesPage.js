@@ -5,7 +5,9 @@ import EntranceAnimation from "../../components/EntranceAnimation/EntranceAnimat
 const StudiesPage = props => (
     <div className="main-container">
         <EntranceAnimation>
-            <p>test</p>
+            <p>Bac</p>
+            <p>IUT</p>
+            <p>Licence</p>
         </EntranceAnimation>
     </div>
 );

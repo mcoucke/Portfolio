@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import AboutPage from "./pages/AboutPage/AboutPage";
-import './App.css';
 import StudiesPage from "./pages/StudiesPage/StudiesPage";
+import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
+import './App.css';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Header/>
         <AboutPage/>
         <StudiesPage/>
+        <ProjectsPage/>
       </div>
     );
   }
