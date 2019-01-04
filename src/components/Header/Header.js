@@ -6,12 +6,11 @@ const Container = styled.nav`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: #E64A19;
     height: ${(props) => props.height}rem;
     `;
 //height -> 0 à 5 rem
 const Section = styled.div`
-    color: #000000;
+    color: #E64A19;
     font-size: 1.5rem;
     display: ${(props) => props.display};
     opacity: ${(props) => props.opacity};
@@ -25,25 +24,25 @@ class Header extends React.Component {
       return (
           <Motion
               defaultStyle={{height: 0}}
-              style={{height: spring(5, { stiffness: 60, damping: 6 })}}
+              style={{height: spring(5, { stiffness: 100, damping: 5 })}}
           >
               {(style) => (
                   <Container height={style.height}>
                       <div />
-                      <Section display={ style.height >= 4 ? 'block' : 'none' }
-                               opacity={ style.height >= 4 ? 1 : 0}>
+                      <Section display={ style.height >= 0 ? 'block' : 'none' }
+                               opacity={style.height/5}>
                           À propos
                       </Section>
-                      <Section display={ style.height >= 4 ? 'block' : 'none' }
-                               opacity={ style.height >= 4 ? 1 : 0}>
+                      <Section display={ style.height >= 0 ? 'block' : 'none' }
+                               opacity={style.height/5}>
                           Parcours
                       </Section>
-                      <Section display={ style.height >= 4 ? 'block' : 'none' }
-                               opacity={ style.height >= 4 ? 1 : 0}>
+                      <Section display={ style.height >= 0 ? 'block' : 'none' }
+                               opacity={style.height/5}>
                           Réalisations
                       </Section>
-                      <Section display={ style.height >= 4 ? 'block' : 'none' }
-                               opacity={ style.height >= 4 ? 1 : 0}>
+                      <Section display={ style.height >= 0 ? 'block' : 'none' }
+                               opacity={style.height/5}>
                           Contact
                       </Section>
                       <div />
