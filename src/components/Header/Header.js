@@ -20,6 +20,13 @@ const Section = styled.div`
     `;
 
 class Header extends React.Component {
+    constructor(props){
+        super(props);
+        this.showStudies = props.actionStudies;
+        this.showProjects = props.actionProjects;
+        this.showContact = props.actionContact;
+    }
+
     render() {
       return (
           <Motion
@@ -28,24 +35,23 @@ class Header extends React.Component {
           >
               {(style) => (
                   <Container height={style.height}>
-                      <div />
+                      <div className="space-div" />
                       <Section display={ style.height >= 0 ? 'block' : 'none' }
-                               opacity={style.height/5}>
-                          À propos
-                      </Section>
-                      <Section display={ style.height >= 0 ? 'block' : 'none' }
-                               opacity={style.height/5}>
+                               opacity={style.height/5}
+                               onClick={this.showStudies}>
                           Parcours
                       </Section>
                       <Section display={ style.height >= 0 ? 'block' : 'none' }
-                               opacity={style.height/5}>
+                               opacity={style.height/5}
+                               onClick={this.showProjects}>
                           Réalisations
                       </Section>
                       <Section display={ style.height >= 0 ? 'block' : 'none' }
-                               opacity={style.height/5}>
+                               opacity={style.height/5}
+                               onClick={this.showContact}>
                           Contact
                       </Section>
-                      <div />
+                      <div className="space-div" />
 
                   </Container>
               )}

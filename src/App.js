@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Header from './components/Header/Header';
 import AboutAnimation from "./components/AboutAnimation/AboutAnimation";
 import AboutButton from "./components/AboutButton/AboutButton";
@@ -6,6 +7,11 @@ import StudiesAnimation from "./components/StudiesAnimation/StudiesAnimation";
 import ProjectsAnimation from "./components/ProjectsAnimation/ProjectsAnimation";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import './styles/App.css';
+
+const ScrollPointer = styled.div`
+    float:"left";
+    clear: "both";
+    `;
 
 
 class App extends Component {
@@ -27,6 +33,7 @@ class App extends Component {
 
     _showProjects = () => {
         this.setState({
+            showStudies: true,
             showProjects: true
         });
         this.scrollTo = 1;
@@ -34,6 +41,8 @@ class App extends Component {
 
     _showContact = () => {
         this.setState({
+            showStudies: true,
+            showProjects: true,
             showContact: true
         });
         this.scrollTo = 2;
@@ -62,7 +71,10 @@ class App extends Component {
     render() {
         return (
           <div className="App">
-              <Header/>
+              <Header actionStudies={this._showStudies.bind()}
+                      actionProjects={this._showProjects.bind()}
+                      actionContact={this._showContact.bind()}
+              />
               <AboutAnimation>
                   <AboutButton text={"Voir mon parcours"} action={this._showStudies.bind()}/>
               </AboutAnimation>
@@ -73,9 +85,7 @@ class App extends Component {
                   </StudiesAnimation>
               )}
 
-              <div style={{ float:"left", clear: "both", }}
-                   ref={(el) => { this.scrollStudies = el; }}>
-              </div>
+              <ScrollPointer ref={(el) => { this.scrollStudies = el; }} />
 
               { this.state.showProjects && (
                   <ProjectsAnimation>
@@ -83,17 +93,13 @@ class App extends Component {
                   </ProjectsAnimation>
               )}
 
-              <div style={{ float:"left", clear: "both", }}
-                   ref={(el) => { this.scrollProjects = el; }}>
-              </div>
+              <ScrollPointer ref={(el) => { this.scrollProjects = el; }} />
 
               { this.state.showContact && (
                   <ContactPage/>
               )}
 
-              <div style={{ float:"left", clear: "both", }}
-                   ref={(el) => { this.scrollContact = el; }}>
-              </div>
+              <ScrollPointer ref={(el) => { this.scrollContact = el; }} />
           </div>
         );
     };
