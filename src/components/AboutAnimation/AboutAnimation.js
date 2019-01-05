@@ -5,8 +5,7 @@ import './style.css';
 
 const Container = styled.div`
     display: flex;
-    padding-top: 5rem;
-    min-height: 100vh;
+    padding-top: 10rem;
     flex: 0 1 auto;
     flex-grow: 0;
     flex-shrink: 1;
@@ -16,6 +15,9 @@ const Container = styled.div`
 
 class AboutAnimation extends React.Component {
     render() {
+        const {
+            children,
+        } = this.props;
         return (
             <StaggeredMotion
                 defaultStyles={[
@@ -26,9 +28,9 @@ class AboutAnimation extends React.Component {
                 ]}
                 styles={(prevStyles) => [
                     {currentOpacity: spring(1, { stiffness: 50, damping: 35 })},
-                    {currentOpacity: spring(prevStyles[0].currentOpacity, { stiffness: 140, damping: 25 })},
-                    {currentOpacity: spring(prevStyles[1].currentOpacity, { stiffness: 110, damping: 30 })},
-                    {currentOpacity: spring(prevStyles[2].currentOpacity, { stiffness: 80, damping: 35 })},
+                    {currentOpacity: spring(prevStyles[0].currentOpacity, { stiffness: 100, damping: 30 })},
+                    {currentOpacity: spring(prevStyles[1].currentOpacity, { stiffness: 100, damping: 30 })},
+                    {currentOpacity: spring(prevStyles[2].currentOpacity, { stiffness: 100, damping: 30 })},
                 ]}
             >
                 {(styles) => (
@@ -39,6 +41,7 @@ class AboutAnimation extends React.Component {
                             Actuellement en Licence 3 Ingénierie informatique à l'Université d'Orléans</p>
                         <p style={{opacity: styles[3].currentOpacity}}>
                             J'étudie toute sorte de technologies : Développement logiciel, web, mobile </p>
+                        {children}
                     </Container>
                 )}
             </StaggeredMotion>

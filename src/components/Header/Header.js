@@ -8,7 +8,7 @@ const Container = styled.nav`
     justify-content: space-around;
     height: ${(props) => props.height}rem;
     `;
-//height -> 0 à 5 rem
+
 const Section = styled.div`
     color: #E64A19;
     font-size: 1.5rem;
@@ -16,8 +16,8 @@ const Section = styled.div`
     opacity: ${(props) => props.opacity};
     padding: 1.5rem;
     margin: auto;
+    cursor: pointer;
     `;
-//display : none à block quand nav height a 5
 
 class Header extends React.Component {
     render() {

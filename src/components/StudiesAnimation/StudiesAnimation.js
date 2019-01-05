@@ -15,6 +15,8 @@ const Container = styled.div`
     display: flex;
     width: 100vw;
     min-height: 100%;
+    height: 20rem;
+    margin-bottom: 20rem;
     `;
 
 const Box = styled.div`
@@ -27,9 +29,9 @@ const Content = styled.div`
     background: ${(props) => props.bg_color};
     `;
 
-class EntranceAnimation extends React.Component {
+class StudiesAnimation extends React.Component {
     render() {
-        const {
+        const {
             children,
         } = this.props;
         return (
@@ -57,8 +59,11 @@ class EntranceAnimation extends React.Component {
                         <Box bg_color={colors[3]} width={styles[3].width} />
                         <Box bg_color={colors[4]} width={styles[4].width} />
                         <Content bg_color={colors[5]}>
-                            {children}
+                            <p>Bac</p>
+                            <p>IUT</p>
+                            <p>Licence</p>
                         </Content>
+                        {children}
                     </Container>
                 )}
             </StaggeredMotion>
@@ -66,4 +71,4 @@ class EntranceAnimation extends React.Component {
     }
 }
 
-export default EntranceAnimation;
+export default StudiesAnimation;
