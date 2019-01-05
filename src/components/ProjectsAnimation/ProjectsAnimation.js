@@ -8,7 +8,6 @@ const colors = [
     '#4DD0E1',
     '#26C6DA',
     '#00BCD4',
-    '#00ACC1',
 ];
 
 const Container = styled.div`
@@ -26,7 +25,9 @@ const Box = styled.div`
 
 const Content = styled.div`
     flex-basis: 100%;
-    background: ${(props) => props.bg_color};
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 300;
     `;
 
 class ProjectsAnimation extends React.Component {
@@ -54,16 +55,14 @@ class ProjectsAnimation extends React.Component {
                 {(styles) => (
                     <div>
                         <Container>
-                            <Content bg_color={colors[5]}>
-                                <p>Projet1</p>
-                                <p>Projet2</p>
-                                <p>Projet3</p>
+                            <Content>
+                                Prochainement
                             </Content>
-                            <Box bg_color={colors[4]} width={styles[4].width} />
-                            <Box bg_color={colors[3]} width={styles[3].width} />
+                            <Box bg_color={colors[0]} width={styles[4].width} />
+                            <Box bg_color={colors[1]} width={styles[3].width} />
                             <Box bg_color={colors[2]} width={styles[2].width} />
-                            <Box bg_color={colors[1]} width={styles[1].width} />
-                            <Box bg_color={colors[0]} width={styles[0].width} />
+                            <Box bg_color={colors[3]} width={styles[1].width} />
+                            <Box bg_color={colors[4]} width={styles[0].width} />
                         </Container>
                         {children}
                     </div>
