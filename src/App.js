@@ -5,7 +5,7 @@ import AboutButton from "./components/AboutButton/AboutButton";
 import StudiesAnimation from "./components/StudiesAnimation/StudiesAnimation";
 import ProjectsAnimation from "./components/ProjectsAnimation/ProjectsAnimation";
 import ContactPage from "./pages/ContactPage/ContactPage";
-import './App.css';
+import './styles/App.css';
 
 
 class App extends Component {
@@ -41,13 +41,13 @@ class App extends Component {
 
     scrollToElement = () => {
         if (this.scrollTo === 0) {
-            this.scrollStudies.scrollIntoView({ behavior: "smooth" });
+            this.scrollStudies.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
         }
         else if (this.scrollTo === 1) {
-            this.scrollProjects.scrollIntoView({ behavior: "smooth" });
+            this.scrollProjects.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
         }
         else if (this.scrollTo === 2) {
-            this.scrollContact.scrollIntoView({ behavior: "smooth" });
+            this.scrollContact.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
         }
     };
 

@@ -13,9 +13,9 @@ const colors = [
 
 const Container = styled.div`
     display: flex;
-    width: 100vw;
+    width: auto;
     min-height: 100%;
-    height: 20rem;
+    height: 30rem;
     margin-bottom: 20rem;
     `;
 
