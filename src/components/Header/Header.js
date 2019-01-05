@@ -24,7 +24,6 @@ class Header extends React.Component {
         super(props);
         this.showStudies = props.actionStudies;
         this.showProjects = props.actionProjects;
-        this.showContact = props.actionContact;
     }
 
     render() {
@@ -45,11 +44,6 @@ class Header extends React.Component {
                                opacity={style.height/5}
                                onClick={this.showProjects}>
                           Réalisations
-                      </Section>
-                      <Section display={ style.height >= 0 ? 'block' : 'none' }
-                               opacity={style.height/5}
-                               onClick={this.showContact}>
-                          Contact
                       </Section>
                       <div className="space-div" />
 

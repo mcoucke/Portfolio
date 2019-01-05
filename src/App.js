@@ -5,7 +5,6 @@ import AboutAnimation from "./components/AboutAnimation/AboutAnimation";
 import AboutButton from "./components/AboutButton/AboutButton";
 import StudiesAnimation from "./components/StudiesAnimation/StudiesAnimation";
 import ProjectsAnimation from "./components/ProjectsAnimation/ProjectsAnimation";
-import ContactPage from "./pages/ContactPage/ContactPage";
 import './styles/App.css';
 
 const ScrollPointer = styled.div`
@@ -20,8 +19,7 @@ class App extends Component {
         this.state = {
             showStudies: false,
             showProjects: false,
-            showContact: false,
-            scrollTo: 0, // 0 : About, 1 : Studies, 2 : Contact
+            scrollTo: 0, // 0 : About, 1 : Studies
         };
     };
     _showStudies = () => {
@@ -39,24 +37,12 @@ class App extends Component {
         this.scrollTo = 1;
     };
 
-    _showContact = () => {
-        this.setState({
-            showStudies: true,
-            showProjects: true,
-            showContact: true
-        });
-        this.scrollTo = 2;
-    };
-
     scrollToElement = () => {
         if (this.scrollTo === 0) {
             this.scrollStudies.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
         }
         else if (this.scrollTo === 1) {
             this.scrollProjects.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
-        }
-        else if (this.scrollTo === 2) {
-            this.scrollContact.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
         }
     };
 
@@ -73,7 +59,6 @@ class App extends Component {
           <div className="App">
               <Header actionStudies={this._showStudies.bind()}
                       actionProjects={this._showProjects.bind()}
-                      actionContact={this._showContact.bind()}
               />
               <AboutAnimation>
                   <AboutButton text={"Voir mon parcours"} action={this._showStudies.bind()}/>
@@ -89,17 +74,11 @@ class App extends Component {
 
               { this.state.showProjects && (
                   <ProjectsAnimation>
-                      <AboutButton text={"Me contacter"} action={this._showContact.bind()}/>
                   </ProjectsAnimation>
               )}
 
               <ScrollPointer ref={(el) => { this.scrollProjects = el; }} />
 
-              { this.state.showContact && (
-                  <ContactPage/>
-              )}
-
-              <ScrollPointer ref={(el) => { this.scrollContact = el; }} />
           </div>
         );
     };
