@@ -10,7 +10,7 @@ const Button = styled.div`
     `;
 
 
-class AboutButton extends React.Component {
+class ScrollButton extends React.Component {
     constructor(props){
         super(props);
         this.showStudies = props.action;
@@ -24,4 +24,4 @@ class AboutButton extends React.Component {
     }
 }
 
-export default AboutButton;
+export default ScrollButton;

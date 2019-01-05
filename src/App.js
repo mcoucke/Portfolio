@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './components/Header/Header';
 import AboutAnimation from "./components/AboutAnimation/AboutAnimation";
-import AboutButton from "./components/AboutButton/AboutButton";
+import ScrollButton from "./components/ScrollButton/ScrollButton";
 import StudiesAnimation from "./components/StudiesAnimation/StudiesAnimation";
 import ProjectsAnimation from "./components/ProjectsAnimation/ProjectsAnimation";
 import './styles/App.css';
@@ -61,12 +61,12 @@ class App extends Component {
                       actionProjects={this._showProjects.bind()}
               />
               <AboutAnimation>
-                  <AboutButton text={"Voir mon parcours"} action={this._showStudies.bind()}/>
+                  <ScrollButton text={"Mon parcours"} action={this._showStudies.bind()}/>
               </AboutAnimation>
 
               { this.state.showStudies && (
                   <StudiesAnimation>
-                      <AboutButton text={"Voir mes réalisations"} action={this._showProjects.bind()}/>
+                      <ScrollButton text={"Mes réalisations"} action={this._showProjects.bind()}/>
                   </StudiesAnimation>
               )}
 
