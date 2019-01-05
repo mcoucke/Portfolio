@@ -15,6 +15,7 @@ const Container = styled.div`
     display: flex;
     width: 100vw;
     min-height: 100%;
+    height: 300px;
     `;
 
 const Box = styled.div`
@@ -27,7 +28,7 @@ const Content = styled.div`
     background: ${(props) => props.bg_color};
     `;
 
-class ExitAnimation extends React.Component {
+class ProjectsAnimation extends React.Component {
     render() {
         const {
             children,
@@ -52,13 +53,16 @@ class ExitAnimation extends React.Component {
                 {(styles) => (
                     <Container>
                         <Content bg_color={colors[5]}>
-                            {children}
+                            <p>Projet1</p>
+                            <p>Projet2</p>
+                            <p>Projet3</p>
                         </Content>
                         <Box bg_color={colors[4]} width={styles[4].width} />
                         <Box bg_color={colors[3]} width={styles[3].width} />
                         <Box bg_color={colors[2]} width={styles[2].width} />
                         <Box bg_color={colors[1]} width={styles[1].width} />
                         <Box bg_color={colors[0]} width={styles[0].width} />
+                        {children}
                     </Container>
                 )}
             </StaggeredMotion>
@@ -66,4 +70,4 @@ class ExitAnimation extends React.Component {
     }
 }
 
-export default ExitAnimation;
+export default ProjectsAnimation;
