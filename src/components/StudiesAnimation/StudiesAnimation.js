@@ -52,19 +52,21 @@ class StudiesAnimation extends React.Component {
                 ]}
             >
                 {(styles) => (
-                    <Container>
-                        <Box bg_color={colors[0]} width={styles[0].width} />
-                        <Box bg_color={colors[1]} width={styles[1].width} />
-                        <Box bg_color={colors[2]} width={styles[2].width} />
-                        <Box bg_color={colors[3]} width={styles[3].width} />
-                        <Box bg_color={colors[4]} width={styles[4].width} />
-                        <Content bg_color={colors[5]}>
-                            <p>Bac</p>
-                            <p>IUT</p>
-                            <p>Licence</p>
-                        </Content>
+                    <div>
+                        <Container>
+                            <Box bg_color={colors[0]} width={styles[0].width} />
+                            <Box bg_color={colors[1]} width={styles[1].width} />
+                            <Box bg_color={colors[2]} width={styles[2].width} />
+                            <Box bg_color={colors[3]} width={styles[3].width} />
+                            <Box bg_color={colors[4]} width={styles[4].width} />
+                            <Content bg_color={colors[5]}>
+                                <p>Bac</p>
+                                <p>IUT</p>
+                                <p>Licence</p>
+                            </Content>
+                        </Container>
                         {children}
-                    </Container>
+                    </div>
                 )}
             </StaggeredMotion>
         );

@@ -3,8 +3,8 @@ import Header from './components/Header/Header';
 import AboutAnimation from "./components/AboutAnimation/AboutAnimation";
 import AboutButton from "./components/AboutButton/AboutButton";
 import StudiesAnimation from "./components/StudiesAnimation/StudiesAnimation";
-import ContactPage from "./pages/ContactPage/ContactPage";
 import ProjectsAnimation from "./components/ProjectsAnimation/ProjectsAnimation";
+import ContactPage from "./pages/ContactPage/ContactPage";
 import './App.css';
 
 
