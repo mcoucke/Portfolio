@@ -3,11 +3,20 @@
 @font-face {
     font-family: 'Lato';
     font-style: normal;
+    font-weight: 400;
     src: url('../libs/fonts/Lato-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Lato';
-    font-weight: bold;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../libs/fonts/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
     src: url('../libs/fonts/Lato-Bold.ttf') format('truetype');
 }

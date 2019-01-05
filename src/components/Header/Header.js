@@ -31,7 +31,7 @@ class Header extends React.Component {
       return (
           <Motion
               defaultStyle={{height: 0}}
-              style={{height: spring(5, { stiffness: 160, damping: 7 })}}
+              style={{height: spring(5, { stiffness: 60, damping: 30 })}}
           >
               {(style) => (
                   <Container height={style.height}>
