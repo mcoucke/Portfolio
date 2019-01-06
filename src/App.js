@@ -6,7 +6,6 @@ import ScrollButton from "./components/ScrollButton/ScrollButton";
 import StudiesAnimation from "./components/StudiesAnimation/StudiesAnimation";
 import ProjectsAnimation from "./components/ProjectsAnimation/ProjectsAnimation";
 import BackgroundAnimation from "./components/BackgroundAnimation/BackgroundAnimation";
-import './styles/App.css';
 
 const ScrollPointer = styled.div`
     float:"left";
