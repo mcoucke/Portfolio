@@ -1,0 +1,56 @@
+@keyframes slideAnim {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.smallItems {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    animation: slideAnim 20s linear infinite;
+}
+
+.smallItems2 {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    animation: slideAnim 20s linear infinite;
+    animation-delay: 10s;
+    animation-fill-mode: both;
+}
+
+.mediumItems {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    animation: slideAnim 25s linear infinite;
+}
+
+.mediumItems2 {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    animation: slideAnim 25s linear infinite;
+    animation-delay: 10s;
+    animation-fill-mode: both;
+}
+
+.largeItems {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    animation: slideAnim 35s linear infinite;
+}
+
+.largeItems2 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    animation: slideAnim 35s linear infinite;
+    animation-delay: 10s;
+    animation-fill-mode: both;
+}
