@@ -20,11 +20,13 @@ class App extends Component {
             showStudies: false,
             showProjects: false,
             scrollTo: 0, // 0 : About, 1 : Studies
+            width: window.innerWidth,
         };
     };
     _showStudies = () => {
         this.setState({
-            showStudies: true
+            showStudies: true,
+            width: window.innerWidth
         });
         this.scrollTo = 0;
     };
@@ -39,12 +41,26 @@ class App extends Component {
 
     scrollToElement = () => {
         if (this.scrollTo === 0) {
-            this.scrollStudies.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
+            if(window.innerWidth <= 500){ //mobile
+                this.scrollStudiesMobile.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest"});
+                console.log("da");
+            }
+            else {
+                this.scrollStudies.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
+            }
         }
         else if (this.scrollTo === 1) {
             this.scrollProjects.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
         }
     };
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
 
     componentDidMount() {
         this.scrollToElement();
@@ -54,6 +70,10 @@ class App extends Component {
         this.scrollToElement();
     }
 
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
+    };
+
     render() {
         return (
           <div className="App">
@@ -61,9 +81,14 @@ class App extends Component {
               <Header actionStudies={this._showStudies.bind()}
                       actionProjects={this._showProjects.bind()}
               />
+
+
               <AboutAnimation>
                   <ScrollButton id={0} text={"Mon parcours"} action={this._showStudies.bind()}/>
               </AboutAnimation>
+
+              <ScrollPointer ref={(el) => { this.scrollStudiesMobile = el; }} />
+
 
               { this.state.showStudies && (
                   <StudiesAnimation>

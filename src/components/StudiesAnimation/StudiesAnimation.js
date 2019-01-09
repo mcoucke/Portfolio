@@ -19,13 +19,13 @@ const Container = styled.div`
     `;
 
 const Box = styled.div`
-    padding-top: 10rem;
     flex-basis: ${(props) => props.width}%;
     background: ${(props) => props.bg_color};
     `;
 
 const Content = styled.div`
     flex-basis: 100%;
+    height: 50vh;
     `;
 
 class StudiesAnimation extends React.Component {
