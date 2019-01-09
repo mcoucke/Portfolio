@@ -2,22 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import {spring, StaggeredMotion} from "react-motion";
 import IconsAnimation from "./IconsAnimation";
+import './style.css';
 
 const Container = styled.div`
     display: flex;
-    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
     `;
 
 const Bloc = styled.div`
     opacity: ${(props) => props.opacity};
-    margin: auto;
-    font-size: 2rem;
+    margin: 0 2rem 0 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     `;
 
 const TechContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
     opacity: ${(props) => props.opacity};
     margin-top: 5rem;
     `;
@@ -55,19 +55,19 @@ class ContentAnimation extends React.Component {
                     <div>
                         <Container>
                             <Bloc opacity={styles[0].opacity}>
-                                <p>2016</p>
-                                <p>Baccalauréat Scientifique - Sciences de l'ingénieur</p>
-                                <p>Option informatique et sciences du numérique</p>
+                                <p className="studiesP">2016</p>
+                                <p className="studiesP">Baccalauréat Scientifique - Sciences de l'ingénieur</p>
+                                <p className="studiesP">Option informatique et sciences du numérique</p>
                             </Bloc>
                             <Bloc opacity={styles[1].opacity}>
-                                <p>2016-2018</p>
-                                <p>DUT Informatique</p>
-                                <p>IUT Informatique - Orléans (45)</p>
+                                <p className="studiesP">2016-2018</p>
+                                <p className="studiesP">DUT Informatique</p>
+                                <p className="studiesP">IUT Informatique - Orléans (45)</p>
                             </Bloc>
                             <Bloc opacity={styles[2].opacity}>
-                                <p>2018-2019</p>
-                                <p>Licence 3 Informatique - Ingénierie informatique</p>
-                                <p>Université - Orléans (45)</p>
+                                <p className="studiesP">2018-2019</p>
+                                <p className="studiesP">Licence 3 Informatique - Ingénierie informatique</p>
+                                <p className="studiesP">Université - Orléans (45)</p>
                             </Bloc>
                         </Container>
                         <TechContainer opacity={styles[3].opacity}>

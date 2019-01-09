@@ -6,7 +6,7 @@ const Button = styled.div`
     cursor: pointer;
     font-size: 1.5rem;
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    padding-bottom: ${(props) => props.botpad}rem;
     `;
 
 
@@ -15,11 +15,17 @@ class ScrollButton extends React.Component {
         super(props);
         this.showStudies = props.action;
         this.text = props.text;
+        this.id = props.id;
     }
 
     render() {
+        if(this.id === 1){
+            return (
+                <Button className="scrollProjects" botpad={1.5} onClick={this.showStudies}>{this.text}</Button>
+            );
+        }
         return (
-            <Button onClick={this.showStudies}>{this.text}</Button>
+            <Button botpad={0} onClick={this.showStudies}>{this.text}</Button>
         );
     }
 }

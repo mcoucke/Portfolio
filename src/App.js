@@ -62,12 +62,12 @@ class App extends Component {
                       actionProjects={this._showProjects.bind()}
               />
               <AboutAnimation>
-                  <ScrollButton text={"Mon parcours"} action={this._showStudies.bind()}/>
+                  <ScrollButton id={0} text={"Mon parcours"} action={this._showStudies.bind()}/>
               </AboutAnimation>
 
               { this.state.showStudies && (
                   <StudiesAnimation>
-                      <ScrollButton text={"Mes réalisations"} action={this._showProjects.bind()}/>
+                      <ScrollButton id={1} text={"Mes réalisations"} action={this._showProjects.bind()}/>
                   </StudiesAnimation>
               )}
 

@@ -14,10 +14,8 @@ const colors = [
 const Container = styled.div`
     display: flex;
     width: auto;
-    min-height: 100%;
-    height: 30rem;
+    height: 50vh;
     padding-top: 10rem;
-    margin-bottom: 10rem;
     `;
 
 const Box = styled.div`
@@ -61,7 +59,7 @@ class StudiesAnimation extends React.Component {
                             <Box bg_color={colors[1]} width={styles[3].width} />
                             <Box bg_color={colors[0]} width={styles[4].width} />
                             <Content>
-                                {styles[4].width <= 5 && (<ContentAnimation/>)}
+                                <ContentAnimation />
                             </Content>
                         </Container>
                         {children}

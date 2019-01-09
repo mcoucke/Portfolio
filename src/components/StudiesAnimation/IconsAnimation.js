@@ -18,12 +18,12 @@ import python from'../../images/python.png';
 import react from'../../images/react.png';
 
 const Image = styled.img`
-    padding: 2rem;
+    margin: 1rem;
     opacity: ${(props) => props.opacity};
     `;
 
 const Container = styled.div`
-    margin: auto;
+    height: 100%;
     `;
 
 class IconsAnimation extends React.Component {
@@ -56,21 +56,21 @@ class IconsAnimation extends React.Component {
             >
                 {(styles) => (
                     <Container>
-                        <Image opacity={styles[0].opacity} src={php} alt="PHP" />
-                        <Image opacity={styles[1].opacity} src={java} alt="Java" />
-                        <Image opacity={styles[2].opacity} src={cpp} alt="C++" />
-                        <Image opacity={styles[3].opacity} src={js} alt="JavaScript" />
-                        <Image opacity={styles[4].opacity} src={python} alt="Python" />
-                        <Image opacity={styles[5].opacity} src={html} alt="HTML" />
-                        <Image opacity={styles[6].opacity} src={css} alt="CSS" />
-                        <Image opacity={styles[7].opacity} src={cakephp} alt="CakePHP" />
-                        <Image opacity={styles[8].opacity} src={j2ee} alt="J2EE" />
-                        <Image opacity={styles[9].opacity} src={nodejs} alt="Node.js" />
-                        <Image opacity={styles[10].opacity} src={react} alt="React" />
-                        <Image opacity={styles[11].opacity} src={jquery} alt="jQuery" />
-                        <Image opacity={styles[12].opacity} src={linux} alt="Linux" />
-                        <Image opacity={styles[13].opacity} src={bootstrap} alt="Bootstrap" />
-                        <Image opacity={styles[14].opacity} src={materialize} alt="Materialize" />
+                        <Image className="divicon" opacity={styles[0].opacity} src={php} alt="PHP" />
+                        <Image className="divicon" opacity={styles[1].opacity} src={java} alt="Java" />
+                        <Image className="divicon" opacity={styles[2].opacity} src={cpp} alt="C++" />
+                        <Image className="divicon" opacity={styles[3].opacity} src={js} alt="JavaScript" />
+                        <Image className="divicon" opacity={styles[4].opacity} src={python} alt="Python" />
+                        <Image className="divicon" opacity={styles[5].opacity} src={html} alt="HTML" />
+                        <Image className="divicon" opacity={styles[6].opacity} src={css} alt="CSS" />
+                        <Image className="divicon" opacity={styles[7].opacity} src={cakephp} alt="CakePHP" />
+                        <Image className="divicon" opacity={styles[8].opacity} src={j2ee} alt="J2EE" />
+                        <Image className="divicon" opacity={styles[9].opacity} src={nodejs} alt="Node.js" />
+                        <Image className="divicon" opacity={styles[10].opacity} src={react} alt="React" />
+                        <Image className="divicon" opacity={styles[11].opacity} src={jquery} alt="jQuery" />
+                        <Image className="divicon" opacity={styles[12].opacity} src={linux} alt="Linux" />
+                        <Image className="divicon" opacity={styles[13].opacity} src={bootstrap} alt="Bootstrap" />
+                        <Image className="divicon" opacity={styles[14].opacity} src={materialize} alt="Materialize" />
                     </Container>
                 )}
             </StaggeredMotion>
