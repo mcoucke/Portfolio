@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaggeredMotion, spring } from "react-motion";
+import EntranceAnimation from '../Animations/EntranceAnimation';
 
 const colors = [
     '#B2EBF2',
@@ -11,63 +11,20 @@ const colors = [
 ];
 
 const Container = styled.div`
-    display: flex;
-    width: auto;
-    min-height: 100%;
-    height: 30rem;
-    margin-bottom: 20rem;
-    `;
-
-const Box = styled.div`
-    flex-basis: ${(props) => props.width}%;
-    background: ${(props) => props.bg_color};
-    `;
-
-const Content = styled.div`
-    flex-basis: 100%;
     margin: auto;
+    padding-top: 10rem;
     font-size: 2rem;
-    font-weight: 300;
     `;
 
 class ProjectsAnimation extends React.Component {
     render() {
-        const {
-            children,
-        } = this.props;
         return (
-            <StaggeredMotion
-                defaultStyles={[
-                    { width: 0},
-                    { width: 100},
-                    { width: 100},
-                    { width: 100},
-                    { width: 100}
-                ]}
-                styles={(prevStyles) => [
-                    { width: spring(0) },
-                    { width: spring(prevStyles[0].width) },
-                    { width: spring(prevStyles[1].width) },
-                    { width: spring(prevStyles[2].width) },
-                    { width: spring(prevStyles[3].width) }
-                ]}
-            >
-                {(styles) => (
-                    <div>
-                        <Container>
-                            <Content>
-                                Prochainement
-                            </Content>
-                            <Box bg_color={colors[0]} width={styles[4].width} />
-                            <Box bg_color={colors[1]} width={styles[3].width} />
-                            <Box bg_color={colors[2]} width={styles[2].width} />
-                            <Box bg_color={colors[3]} width={styles[1].width} />
-                            <Box bg_color={colors[4]} width={styles[0].width} />
-                        </Container>
-                        {children}
-                    </div>
-                )}
-            </StaggeredMotion>
+            <div>
+                <EntranceAnimation colors={colors} />
+                <Container>
+                    En développement
+                </Container>
+            </div>
         );
     }
 }

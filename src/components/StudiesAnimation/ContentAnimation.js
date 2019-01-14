@@ -34,8 +34,10 @@ class ContentAnimation extends React.Component {
         super(props);
         this.bg_color = props.bg_color;
     }
-
     render() {
+        const {
+            children,
+        } = this.props;
         return (
             <StaggeredMotion
                 defaultStyles={[
@@ -74,6 +76,7 @@ class ContentAnimation extends React.Component {
                             <Title>Technologies</Title>
                             <IconsAnimation/>
                         </TechContainer>
+                        {children}
                     </div>
                 )}
             </StaggeredMotion>

@@ -3,17 +3,11 @@
         width: 18px;
         height: 18px;
     }
-    .scrollProjects {
-        margin-top: 450px;
-    }
 }
 @media (min-width: 376px){
     .divicon {
         width: 24px;
         height: 24px;
-    }
-    .scrollProjects {
-        margin-top: 450px;
     }
 }
 @media (min-width: 417px){
@@ -21,17 +15,11 @@
         width: 24px;
         height: 24px;
     }
-    .scrollProjects {
-        margin-top: 350px;
-    }
 }
 @media (min-width: 426px){
     .divicon {
         width: 30px;
         height: 30px;
-    }
-    .scrollProjects {
-        margin-top: 550px;
     }
 }
 @media (min-width: 498px){
@@ -39,17 +27,11 @@
         width: 30px;
         height: 30px;
     }
-    .scrollProjects {
-        margin-top: 450px;
-    }
 }
 @media (min-width: 769px){
     .divicon {
         width: 36px;
         height: 36px;
-    }
-    .scrollProjects {
-        margin-top: 550px;
     }
 }
 @media (min-width: 943px){
@@ -57,20 +39,11 @@
         width: 42px;
         height: 42px;
     }
-    .scrollProjects {
-        margin-top: 350px;
-    }
 }
 
 @media (min-width: 1440px){
     .divicon {
         width: 48px;
         height: 48px;
-    }
-}
-
-@media (min-width: 1512px){
-    .scrollProjects {
-        margin-top: 200px;
     }
 }

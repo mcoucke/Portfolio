@@ -91,9 +91,11 @@ class App extends Component {
 
 
               { this.state.showStudies && (
-                  <StudiesAnimation>
+                  <div>
+                      <StudiesAnimation>
+                      </StudiesAnimation>
                       <ScrollButton id={1} text={"Mes réalisations"} action={this._showProjects.bind()}/>
-                  </StudiesAnimation>
+                  </div>
               )}
 
               <ScrollPointer ref={(el) => { this.scrollStudies = el; }} />
