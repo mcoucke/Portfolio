@@ -29,6 +29,14 @@ const Title = styled.p`
     font-weight: 300;
     `;
 
+const Diploma = styled.p`
+    color: #FF5722;
+    `;
+
+const Year = styled.p`
+    font-weight: 900;
+    `;
+
 class ContentAnimation extends React.Component {
     constructor(props){
         super(props);
@@ -57,19 +65,19 @@ class ContentAnimation extends React.Component {
                     <div>
                         <Container>
                             <Bloc opacity={styles[0].opacity}>
-                                <p className="studiesP">2016</p>
-                                <p className="studiesP">Baccalauréat Scientifique - Sciences de l'ingénieur</p>
-                                <p className="studiesP">Option informatique et sciences du numérique</p>
+                                <Year>2016</Year>
+                                <Diploma>BAC S - Sciences de l'ingénieur</Diploma>
+                                <p>Informatique et sciences du numérique</p>
                             </Bloc>
                             <Bloc opacity={styles[1].opacity}>
-                                <p className="studiesP">2016-2018</p>
-                                <p className="studiesP">DUT Informatique</p>
-                                <p className="studiesP">IUT Informatique - Orléans (45)</p>
+                                <Year>2016-2018</Year>
+                                <Diploma>DUT Informatique</Diploma>
+                                <p>IUT Informatique d'Orléans (45)</p>
                             </Bloc>
                             <Bloc opacity={styles[2].opacity}>
-                                <p className="studiesP">2018-2019</p>
-                                <p className="studiesP">Licence 3 Informatique - Ingénierie informatique</p>
-                                <p className="studiesP">Université - Orléans (45)</p>
+                                <Year>2018-2019</Year>
+                                <Diploma>Licence 3 Ingénierie informatique</Diploma>
+                                <p>Université d'Orléans (45)</p>
                             </Bloc>
                         </Container>
                         <TechContainer opacity={styles[3].opacity}>
